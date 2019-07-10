@@ -9,19 +9,22 @@
 </head>
 
 <body>
-  <input type="text" ng-model="favFood" placeholder="Enter your Favorite food here" />
-  <div>Your Favorite food is {{favFood}}</div>
-
   <div ngController="myAppController">
-    <header ng-include= "'header.html'"></header>
-    <lable>Search the Ninja:</lable>
-    <input type="text" ngModel="searchNames" />
+    <div class="content">
+      <header ng-include="'header.html'"></header>
+      <input type="text" ng-model="favFood" placeholder="Enter your Favorite food here" />
+      <div>Your Favorite food is {{favFood}}</div>
 
-    <ul>
-      <li ng-repeat="ninja in ninjas">{{ninja.name | filter:searchName}}</li>
-    </ul>
+
+
+      <lable>Search the Ninja:</lable>
+      <input type="text" ngModel="searchNames" />
+
+      <ul>
+        <li ng-repeat="ninja in ninjas">{{ninja.name | filter:searchName}}</li>
+      </ul>
+    </div>
   </div>
-
 </body>
 
 </html>
