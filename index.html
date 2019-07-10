@@ -13,8 +13,11 @@
   <div>Your Favorite food is {{favFood}}</div>
 
   <div ngController="myAppController">
+    <lable>Search the Ninja:</lable>
+    <input type="text" ngModel="searchNames" />
+
     <ul>
-      <li ng-repeat="ninja in ninjas">{{ninja.name}}</li>
+      <li ng-repeat="ninja in ninjas">{{ninja.name | filter:searchName}}</li>
     </ul>
   </div>
 
