@@ -9,17 +9,20 @@
 </head>
 
 <body>
-  <div ngController="myAppController">
+  <div ng-controller="myAppController">
     <div class="content">
       <header ng-include="'header.html'"></header>
+      {{msg}} </br>
+      <example-directive></example-directive>
+
       <input type="text" ng-model="favFood" placeholder="Enter your Favorite food here" />
       <div>Your Favorite food is {{favFood}}</div>
 
       <lable>Search the Ninja:</lable>
-      <input type="text" ngModel="searchNames" />
+      <input type="text" ng-model="searchName" />
 
       <ul>
-        <li ng-repeat="ninja in ninjas" ng-show="ninja.availability">{{ninja .name | filter:searchName}} </li>
+        <li ng-repeat="ninja in ninjas | filter:{name:searchName}" ng-show="ninja.availability">{{ninja.name }} </li>
       </ul>
     </div>
   </div>
