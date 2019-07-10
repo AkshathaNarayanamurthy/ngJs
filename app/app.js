@@ -5,16 +5,19 @@ myApp.controller('myAppController', ['$scope', function ($scope) {
     $scope.ninjas = [
         {
             name: 'Yoshi',
-            belt: 'Black'
+            belt: 'Black',
+            availability:true
         },
         {
             name: 'Samui',
-            belt: 'Yellow'
+            belt: 'Yellow',
+            availability:false
 
         },
         {
             name: 'Ryu',
-            belt: 'Blue'
+            belt: 'Blue',
+            availability:true
         }
     ];
 
